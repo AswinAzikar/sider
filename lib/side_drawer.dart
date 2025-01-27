@@ -15,7 +15,7 @@ class SideDrawer extends StatelessWidget {
       width: 250,
       color: backgroundColor ?? Colors.blueGrey[900],
       child: ListView(
-        padding: EdgeInsets.zero,
+        padding: EdgeInsets.all(8),
         children: [
           headerWidget ??
               DrawerHeader(
