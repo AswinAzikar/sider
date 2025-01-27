@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           children: [
             SideDrawer(
               headerWidget: SizedBox(),
-              backgroundColor: const Color.fromARGB(255, 181, 214, 240),
+              backgroundColor: const Color.fromARGB(255, 64, 214, 104),
             ),
             Expanded(
               child: Center(

@@ -7,8 +7,7 @@ class ExpandableDrawerTab extends StatelessWidget {
   final int tabId;
   final List<Widget> children;
 
-
-  const ExpandableDrawerTab({
+  const  ExpandableDrawerTab({
     super.key,
     required this.title,
     required this.icon,
@@ -19,7 +18,7 @@ class ExpandableDrawerTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      
+
       leading: Icon(icon, color: Colors.white),
       title: ValueListenableBuilder<int>(
         valueListenable: SideDrawer.activeTabNotifier,
