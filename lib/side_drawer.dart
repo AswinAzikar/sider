@@ -1,5 +1,7 @@
-/// This file contains the `SideDrawer` widget which is a custom drawer that can be used in the app.
+/// This file contains the `SideDrawer` widget which is a custom drawer that can be used in a Flutter application.
 library;
+
+import 'package:flutter/material.dart';
 
 /// A custom side drawer widget that can be used in a Flutter application.
 ///
@@ -19,6 +21,7 @@ library;
 /// * `sideListPadding`: The padding for the list of children inside the side drawer.
 /// * `shrinkWrap`: Whether the list of children should shrink wrap its content.
 /// * `gradient`: A gradient to be applied to the background of the side drawer.
+/// * `pageMap`: A map of pages to be displayed in the side drawer.
 ///
 /// Example usage:
 /// ```dart
@@ -39,11 +42,13 @@ library;
 ///   sideListPadding: EdgeInsets.symmetric(vertical: 8),
 ///   shrinkWrap: true,
 ///   gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
+///   pageMap: {
+///     0: HomePage(),
+///     1: SettingsPage(),
+///   },
 /// )
 /// ```
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-// This file contains the SideDrawer widget which is a custom drawer that can be used in the app.
-import 'package:flutter/material.dart';
 
 class SideDrawer extends StatelessWidget {
   static final ValueNotifier<int> activeTabNotifier = ValueNotifier<int>(0);
@@ -72,7 +77,8 @@ class SideDrawer extends StatelessWidget {
     this.sideBarPadding,
     this.sideListPadding,
     this.shrinkWrap,
-    this.gradient, required this.pageMap,
+    this.gradient,
+    required this.pageMap,
   });
 
   @override
