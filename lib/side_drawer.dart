@@ -58,6 +58,7 @@ class SideDrawer extends StatelessWidget {
   final EdgeInsetsGeometry? sideListPadding;
   final bool? shrinkWrap;
   final Gradient? gradient;
+  final Map<int, Widget> pageMap;
 
   const SideDrawer({
     super.key,
@@ -71,7 +72,7 @@ class SideDrawer extends StatelessWidget {
     this.sideBarPadding,
     this.sideListPadding,
     this.shrinkWrap,
-    this.gradient,
+    this.gradient, required this.pageMap,
   });
 
   @override

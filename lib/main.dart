@@ -8,6 +8,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  static final Map<int, Widget> pageMap = {
+    1: Center(child: Text('DDDDDD')),
+    2: Center(child: Text('Settings')),
+    3: Center(child: Text('Projects')),
+    4: Center(child: Text('Project 1')),
+    5: Center(child: Text('Project 2')),
+    6: Center(child: Text('Reports')),
+    7: Center(child: Text('Report 1')),
+    8: Center(child: Text('Report 2')),
+    9: Center(child: Text('About')),
+  };
   const MyApp({super.key});
 
   @override
@@ -19,6 +30,7 @@ class MyApp extends StatelessWidget {
         body: Row(
           children: [
             SideDrawer(
+              pageMap: pageMap,
               backgroundColor: const Color.fromARGB(255, 64, 214, 104),
               children: [
                 DrawerHeader(
@@ -48,7 +60,6 @@ class MyApp extends StatelessWidget {
                   tabId: 2,
                 ),
                 ExpandableDrawerTab(
-                  
                   expandedBackgroundColor: Colors.blueGrey[900],
                   expandedTextStyle: TextStyle(color: Colors.white),
                   collapsedTextStyle: TextStyle(color: Colors.white),
@@ -58,12 +69,12 @@ class MyApp extends StatelessWidget {
                     DrawerTab(
                         tileColor: backgroundColor,
                         title: 'Project 1',
-                        tabId: 31,
+                        tabId: 4,
                         isChild: true),
                     DrawerTab(
                         tileColor: backgroundColor,
                         title: 'Project 2',
-                        tabId: 32,
+                        tabId: 5,
                         isChild: true),
                   ],
                 ),
@@ -71,17 +82,17 @@ class MyApp extends StatelessWidget {
                   collapsedTextStyle: TextStyle(color: Colors.white),
                   expandedTextStyle: TextStyle(color: Colors.white),
                   title: 'Reports',
-                  tabId: 4,
+                  tabId: 6,
                   children: [
                     DrawerTab(
                         tileColor: backgroundColor,
                         title: 'Report 1',
-                        tabId: 41,
+                        tabId: 7,
                         isChild: true),
                     DrawerTab(
                         tileColor: backgroundColor,
                         title: 'Report 2',
-                        tabId: 42,
+                        tabId: 8,
                         isChild: true),
                   ],
                 ),
@@ -89,7 +100,7 @@ class MyApp extends StatelessWidget {
                   tileColor: backgroundColor,
                   title: 'About',
                   // icon: Icons.info,
-                  tabId: 5,
+                  tabId: 9,
                 ),
               ],
             ),
@@ -98,10 +109,12 @@ class MyApp extends StatelessWidget {
                 child: ValueListenableBuilder<int>(
                   valueListenable: SideDrawer.activeTabNotifier,
                   builder: (context, activeTab, child) {
-                    return Text(
-                      'Selected Tab: $activeTab',
-                      style: TextStyle(fontSize: 24),
-                    );
+                    // return Text(
+                    //   'Selected Tab: $activeTab',
+                    //   style: TextStyle(fontSize: 24),
+                    // );
+
+                    return pageMap[activeTab] ?? Container();
                   },
                 ),
               ),
