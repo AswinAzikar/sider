@@ -48,6 +48,8 @@ class MyApp extends StatelessWidget {
                   tabId: 2,
                 ),
                 ExpandableDrawerTab(
+                  expandedTextStyle: TextStyle(color: Colors.white),
+                  collapsedTextStyle: TextStyle(color: Colors.white),
                   title: 'Projects',
                   tabId: 3,
                   children: [
@@ -64,6 +66,8 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
                 ExpandableDrawerTab(
+                  collapsedTextStyle: TextStyle(color: Colors.white),
+                  expandedTextStyle: TextStyle(color: Colors.white),
                   title: 'Reports',
                   tabId: 4,
                   children: [
