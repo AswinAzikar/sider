@@ -1,3 +1,56 @@
+/// A widget that represents an expandable drawer tab with customizable properties.
+///
+/// The [ExpandableDrawerTab] widget is a stateless widget that displays an
+/// expandable tile with a title, leading widget, and a list of child widgets.
+/// It provides various customization options for the appearance and behavior
+/// of the tile in both collapsed and expanded states.
+///
+/// The widget uses an [ExpansionTile] internally to handle the expansion and
+/// collapse behavior. It also integrates with the [SideDrawer] to manage the
+/// active tab state.
+///
+/// ## Parameters:
+///
+/// - `title` (required): The title of the expandable drawer tab.
+/// - `leading`: An optional widget to display before the title.
+/// - `tabId` (required): An identifier for the tab used to manage the active state.
+/// - `children` (required): A list of widgets to display as the children of the expandable tile.
+/// - `childrenPadding`: Padding for the children widgets.
+/// - `initiallyExpanded`: Whether the tile is initially expanded.
+/// - `isInteractive`: Whether the tile is interactive.
+/// - `collapsedBackgroundColor`: Background color of the tile when collapsed.
+/// - `collapsedShape`: Shape of the tile when collapsed.
+/// - `collapsedIconColor`: Icon color of the tile when collapsed.
+/// - `collapsedTextColor`: Text color of the tile when collapsed.
+/// - `expandedBackgroundColor`: Background color of the tile when expanded.
+/// - `expandedShape`: Shape of the tile when expanded.
+/// - `expandedIconColor`: Icon color of the tile when expanded.
+/// - `expandedTextColor`: Text color of the tile when expanded.
+/// - `tileDecoration`: Decoration for the tile container.
+/// - `expandedTextStyle` (required): Text style for the title when expanded.
+/// - `collapsedTextStyle` (required): Text style for the title when collapsed.
+/// - `expandedCrossAxisAlignment`: Cross-axis alignment of the children when expanded.
+/// - `subtitle`: An optional subtitle widget to display below the title.
+/// - `showTrailingIcon`: Whether to show the trailing icon.
+/// - `expansionAnimationStyle`: Animation style for the expansion.
+/// - `trailing`: An optional widget to display at the end of the tile.
+/// - `expandedAlignment`: Alignment of the children when expanded.
+///
+/// ## Example:
+///
+/// ```dart
+/// ExpandableDrawerTab(
+///   title: 'Tab Title',
+///   tabId: 1,
+///   children: [
+///     ListTile(title: Text('Child 1')),
+///     ListTile(title: Text('Child 2')),
+///   ],
+///   expandedTextStyle: TextStyle(color: Colors.blue),
+///   collapsedTextStyle: TextStyle(color: Colors.grey),
+/// );
+/// ```
+library;
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
