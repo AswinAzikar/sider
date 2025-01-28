@@ -12,20 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
-    Color backgroundColor = const Color.fromARGB(255, 64, 214, 104);  
+    Color backgroundColor = const Color.fromARGB(255, 64, 214, 104);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Row(
           children: [
             SideDrawer(
-
-backgroundColor: const Color.fromARGB(255, 64, 214, 104),
-
-children:  [
+              backgroundColor: const Color.fromARGB(255, 64, 214, 104),
+              children: [
                 DrawerHeader(
                   decoration: BoxDecoration(
                     color: Colors.blueGrey,
@@ -43,18 +38,17 @@ children:  [
                 DrawerTab(
                   tileColor: backgroundColor,
                   title: 'Dashboard',
-                  icon: Icons.dashboard,
+                  // icon: Icons.dashboard,
                   tabId: 1,
                 ),
                 DrawerTab(
                   tileColor: backgroundColor,
                   title: 'Settings',
-                  icon: Icons.settings,
+                  // icon: Icons.settings,
                   tabId: 2,
                 ),
                 ExpandableDrawerTab(
                   title: 'Projects',
-                  icon: Icons.folder,
                   tabId: 3,
                   children: [
                     DrawerTab(
@@ -71,7 +65,6 @@ children:  [
                 ),
                 ExpandableDrawerTab(
                   title: 'Reports',
-                  icon: Icons.analytics,
                   tabId: 4,
                   children: [
                     DrawerTab(
@@ -89,7 +82,7 @@ children:  [
                 DrawerTab(
                   tileColor: backgroundColor,
                   title: 'About',
-                  icon: Icons.info,
+                  // icon: Icons.info,
                   tabId: 5,
                 ),
               ],

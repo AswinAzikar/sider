@@ -3,14 +3,14 @@ import 'package:sider/side_drawer.dart';
 
 class ExpandableDrawerTab extends StatelessWidget {
   final String title;
-  final IconData icon;
+  final Widget? leading;
   final int tabId;
   final List<Widget> children;
 
   const  ExpandableDrawerTab({
     super.key,
     required this.title,
-    required this.icon,
+   this.leading,
     required this.tabId,
     required this.children,
   });
@@ -19,7 +19,7 @@ class ExpandableDrawerTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ExpansionTile(
 
-      leading: Icon(icon, color: Colors.white),
+      leading: leading??SizedBox(),
       title: ValueListenableBuilder<int>(
         valueListenable: SideDrawer.activeTabNotifier,
         builder: (context, activeTab, child) {
